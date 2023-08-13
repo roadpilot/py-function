@@ -1,0 +1,16 @@
+AuthUserFile /home/achterma/security/.htpasswd_scores_
+AuthGroupFile /dev/null
+AuthName "Please Enter Password"
+AuthType Basic
+Require valid-user
+
+# File modified on Mon Dec 17 11:21:30 2018 by server
+# For security reasons, mod_php is not used on this server. Use a php.ini file for php directives
+# php_flag display_errors 1
+
+# DISABLE CACHING
+<IfModule mod_headers.c>
+	Header set Cache-Control "no-cache, no-store, must-revalidate"
+	Header set Pragma "no-cache"
+	Header set Expires 0
+</IfModule>
