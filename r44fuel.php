@@ -1,8 +1,3 @@
-<% Response.CacheControl = "no-cache" %>
-<% Response.AddHeader "Pragma", "no-cache" %> 
-<% Response.Expires = -1 %>
-<% Session.Timeout = 1000 %>
-<!-- #include file="sqlencode.xinc"-->
 <html>
 
 <head>
@@ -15,7 +10,6 @@
 <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
 <meta name="ProgId" content="FrontPage.Editor.Document">
 <title>Fuel Calculator</title>
-<!--#include file="sqlencode.xinc"-->
 <style>
 td,div,a {font-family: Arial; font-size: 12pt}
 input {font-family: Arial; font-size: 12pt; background-color:#000080; color: white}
@@ -44,9 +38,7 @@ i=i.toFixed(2);
 document.all('fuelinstrux').innerText=i+" Gal";
 document.all('fuelinstrux').innerText+="";
 }
-<%if item_val<>"" then%>
 setFuel("<%=item_val%>");
-<%end if%>
 </script>
 </html>
 
