@@ -20,11 +20,11 @@ body {background-color:#000080}
 </style>
 </head>
 <form>
-<input style="font-size:26pt;text-align:right" value="<%=item_val%>" name="aux_val" type="tel" size="2" onkeyup="setFuel(this)">
+<input style="font-size:26pt;text-align:right" value="" name="aux_val" type="tel" size="2" onkeyup="setFuel(this)">
 <span class="topic">/16 Aux (17.0 Gal)
 </span>
 <br>
-<input style="font-size:26pt;text-align:right" value="<%=item_val%>" name="main_val" type="tel" size="2" onkeyup="setFuel(this)">
+<input style="font-size:26pt;text-align:right" value="" name="main_val" type="tel" size="2" onkeyup="setFuel(this)">
 <span class="topic">/16 Main (29.5 Gal)
 </span>
 </form>
