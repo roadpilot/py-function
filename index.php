@@ -1,3 +1,27 @@
+<?php
+<!DOCTYPE html>
+<html lang="en">
+<?php
+include '../.htauth';
+include 'css.php';
+include 'javascript.php';
+
+ini_set('display_errors', 1);
+error_reporting( error_reporting() & ~E_NOTICE );
+error_reporting(E_ALL);
+date_default_timezone_set('America/Denver');
+
+$dbname = "achterma_charges";
+// Create connection
+$dbcon = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($dbcon->connect_error) {
+     die("Connection failed: " . $dbcon->connect_error);
+} 
+
+echo 'foo';exit;
+
+?>
 <% Response.CacheControl = "no-cache" %>
 <% Response.AddHeader "Pragma", "no-cache" %> 
 <% Response.Expires = -1 %>
