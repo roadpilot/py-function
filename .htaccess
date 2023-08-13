@@ -1,4 +1,4 @@
-AuthUserFile /home/achterma/security/.htpasswd_scores_
+AuthUserFile /home/achterma/security/.pf
 AuthGroupFile /dev/null
 AuthName "Please Enter Password"
 AuthType Basic
