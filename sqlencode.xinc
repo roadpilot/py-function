@@ -1,0 +1,26 @@
+<%
+function sqlencode(byref a)
+	'response.write a & ":" & isdate(a)
+	'if isdate(trim(a)) then response.write datevalue(trim(a))
+	'response.write "<BR>"
+	'response.write a & ":" & sqlencode & isnumeric(a) & "<BR>"
+	a=trim(a)
+	if a="" or isnull(a) or a="null" then
+		sqlencode = "null"
+	elseif force="text" then
+		sqlencode = "'" & replace(a,"'","''") & "'"
+	elseif isnumeric(a) and instr(a,"$")<1 and instr(a,",")<1 or force="num" then 
+		sqlencode = "" & a & ""
+	elseif isdate(a) or force="date" then
+		sqlencode = "#" & trim(a) & "#"
+	elseif instr("True,False,",a & ",")>0 then 
+		if a=" true" or a="true" or (a) then
+			sqlencode = "True"
+		else
+			sqlencode = "False"
+		end if
+	else
+		sqlencode = "'" & replace(a,"'","''") & "'"
+	end if
+end function
+%>
