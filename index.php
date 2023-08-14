@@ -1,24 +1,3 @@
-
-<!--
-<textarea name="plan" style="width:290px;height:70px" rows="1" cols="20">Preflight done.  Take off in a few.  Alpha-pop is on the go!</textarea>
-<input class="button" type="button" onclick="sms('wife')" value="Notify your wife!" style="font-weight:bold;height:50px;width:95%"><br><br>
--->
-<script>
-function sms(who){
-//plan=document.forms[0].plan.value;
-plan="test";
-if (who=="wife") {
-	numbers='3038292715';
-	plan+="  L/M.";
-}
-if (who=="wifereturn") {
-	numbers='3038292715';
-	plan="Sagely hone. Lug ewe.";
-}
-location.href='sms:'+numbers+'?body='+plan;
-}
-</script>
-
 <html>
 
 <head>
